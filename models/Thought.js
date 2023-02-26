@@ -13,6 +13,7 @@ const thoughtSchema = new Schema(
             type: Date,
             default: Date.now,
         },
+        //need to fix this so it connects right
         username: {
             type: String,
             required: true,
@@ -23,6 +24,7 @@ const thoughtSchema = new Schema(
     {
         toJSON: {
             getters: true,
+            virtuals: true
         },
     }
 );
