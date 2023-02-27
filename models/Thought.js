@@ -15,7 +15,7 @@ const thoughtSchema = new Schema(
         },
         //need to fix this so it connects right
         username: {
-            type: String,
+            type: Schema.Types.ObjectId,
             required: true,
             ref: 'User'
         },

@@ -22,7 +22,7 @@ module.exports = {
         Thought.create(req.body)
             .then((thought) => {
                 return User.findOneAndUpdate(
-                    { _id: req.body.userId },
+                    { _id: req.body.username },
                     { $addToSet: { thoughts: thought._id } },
                     { new: true }
                 );
