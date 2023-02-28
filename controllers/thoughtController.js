@@ -62,7 +62,7 @@ module.exports = {
             ? res.status(404).json({ message: `No thought with this ID was found.` })
             : User.findOneAndUpdate(
                 { thoughts: req.params._id },
-                { $pull: { applications: req.params._id } },
+                { $pull: { thoughts: req.params._id } },
                 { new: true }
             ))
         .then((user) =>
